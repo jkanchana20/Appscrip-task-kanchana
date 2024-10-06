@@ -1,0 +1,49 @@
+.asidebar-container {
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .filter-options {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .filter-item {
+    margin-bottom: 15px;
+  }
+  
+  .filter-heading {
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filter-details {
+    padding-left: 20px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .dropdown-symbol {
+    transition: transform 0.3s;
+  }
+  
+  .dropdown-symbol.open {
+    transform: rotate(180deg);
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  

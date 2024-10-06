@@ -1,0 +1,108 @@
+.discover {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.discover h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.discover p {
+    font-size: 16px;
+    color: #555;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+
+.hide-filter {
+    display: flex;
+    align-items: center;
+}
+
+.hide-filter p {
+    font-size: 16px;
+    color: #444;
+    cursor: pointer;
+}
+
+.filter-button {
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.recommend select {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.items-container.expanded {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.items {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+    border: 1px solid transparent; /* Optional: for a subtle border */
+}
+
+.items:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    transform: scale(1.05); /* Slightly enlarge the item */
+    border-color: #007bff; /* Change border color on hover */
+    background-color: #f9f9f9; /* Change background color on hover */
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .total {
+        display: none;
+        border-color: 1px solid black;
+    }
+    .items-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .items-container {
+        grid-template-columns: 1fr;
+    }
+    .items-container.expanded {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
