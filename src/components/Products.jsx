@@ -5,7 +5,7 @@ import Footer from './Footer';
 import '../css/product.css';
 import { HeartFill } from "react-bootstrap-icons";
 import { Link } from 'react-router-dom';
-
+import '../css/shopping.css'
 const Products = () => {
   const [item, setItem] = useState(null);
   const [likedItems, setLikedItems] = useState({});
@@ -39,6 +39,7 @@ const Products = () => {
       
       {item ? (
         <div className="img-container">
+          <div>
           <img src={item.image} alt={item.title} />
           <strong>{item.title.slice(0, 30)}...</strong>
           <br />
@@ -70,6 +71,7 @@ const Products = () => {
             >
               Sign Up
             </button>
+            </div>
           </div>
         </div>
       ) : (
@@ -77,12 +79,13 @@ const Products = () => {
       )}
 
       {dressItems.length > 0 ? (
-        <div>
+        <div className={`items-container ${false} ? "" : "expanded"`}>
           {dressItems.map((dressItem) => (
-            <Link to={`/products/${dressItem.id}`} key={dressItem.id}>
-              <div className="items">
-                <img src={dressItem.image} alt={dressItem.title} className="image" />
-                <p className="title">{dressItem.title.slice(0, 25)}</p>
+          
+                <div className="items"  key={dressItem.id}>
+                <Link to={`/products/${dressItem.id}`}><img src={dressItem.image} alt={dressItem.title} className="image" />   
+                <br/>
+                <p className="title">{dressItem.title.slice(0, 25)}</p></Link>
                 <strong className="price">
                   Sign up to see pricing
                   <span>
@@ -98,7 +101,7 @@ const Products = () => {
                   </span>
                 </strong>
               </div>
-            </Link>
+         
           ))}
         </div>
       ) : (
