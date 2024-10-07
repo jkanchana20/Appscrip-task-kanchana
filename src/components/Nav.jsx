@@ -36,12 +36,12 @@ const Nav = () => {
         </div>
         <div
           className="flower-icon"
-          style={{ fontSize: "30px", marginTop: "-5.5px" }}
+          style={{ fontSize: "35px", marginTop: "-7.5px" }}
         >
           &#10047;
         </div>
        </div>
-        <div className="logo-container" style={{ marginTop: "-25px" }}>
+        <div className="logo-container" style={{ marginTop: "-10px" }}>
           <h1>LOGO</h1>
         </div>
         <div
@@ -66,7 +66,7 @@ const Nav = () => {
             <Person size={20} />
           </div>
           <div className="language" style={{ marginTop: "-20px" }}>
-            <h4>ENG</h4>
+            <h4>ENG<span>▼</span></h4>
           </div>
         </div>
       </div>
@@ -77,6 +77,7 @@ const Nav = () => {
             display: "flex",
             justifyContent: "space-around",
             listStyle: "none",
+            margin:"10px 90px"
           }}
         >
           <li className="menu-items">
