@@ -25,11 +25,15 @@ const AsideBar = () => {
             <li key={index} className="filter-item">
               <div className="filter-heading" onClick={() => toggleSection(item.label)}>
                 {item.label}
+                
+               
                 <span className={`dropdown-symbol ${openSection === item.label ? "open" : ""}`}>
                   ▼
                 </span>
+                
               </div>
-              {openSection === item.label && <p className="filter-details">{item.details}</p>}
+             <p style={{marginLeft:"-130px"}}>All</p>
+              {openSection === item.label && <small className="filter-details" style={{marginLeft:"-35px"}}>{item.details}</small>}
               <hr />
             </li>
           ))}
